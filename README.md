@@ -13,10 +13,10 @@ In this way we can progressively make the sprite look more like a face with each
 
 Moustached man:
 
-<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/Mario.png" alt="alt text" width="100%" height="100%">
-
-A closer look:
 <img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/2.png" alt="alt text" width="60%" height="50%">
+
+The entire evolution process:
+<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/Mario.png" alt="alt text" width="100%" height="100%">
 
 
 Dog face:
