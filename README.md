@@ -29,9 +29,9 @@ Moustached man:
 <img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/2.png" alt="alt text" width="60%" height="50%"></p>
 
 The entire evolution process:
-<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/Mario.png" alt="alt text" width="100%" height="100%">
+<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/Mario.png" alt="alt text" width="95%" height="100%">
 
 The simulator can be used in the same way to generate anything you can think of that is symmetrical. Here is an example of a dog face:
 
-<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/Dog_evolve.png" alt="alt text" width="100%" height="100%">
+<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/Dog_evolve.png" alt="alt text" width="95%" height="100%">
 
