@@ -12,7 +12,7 @@ To simulate this, we generate sprites based on mutations of an original 'DNA' ma
 Run the code to generate a grid of sprites. User clicks preferred sprite (in this example we prefer sprites that look like human faces) and a new grid of sprites is generated based on the previous selection. Continue until either the number of simulation steps is reached or a key is pressed. The evolution is then displayed in reverse chronological order.
 Some examples are shown below.
 
-A face sprite and it's unique corresponding DNA matrix:
+A face sprite and it's unique corresponding DNA matrix from which it is drawn:
 
 <p align="center">
 <img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/grumpfig.png" alt="alt text" width="25%" height="25%" class=center>
