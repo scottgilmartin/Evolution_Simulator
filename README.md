@@ -1,5 +1,5 @@
 # What is this?
-Evolution/ artificial selection simulator, inspired by Heikegani crabs. 
+A simple evolution/ artificial selection simulator, inspired by Heikegani crabs. 
 From the wikipedia article:
 "...according to this hypothesis, the crabs with shells resembling Samurai were thrown back to the sea by fishermen out of respect for the Heike warriors, while those not resembling Samurai were eaten, giving the former a greater chance of reproducing. 
 Thus, the more closely the crabs resembled a samurai face, the more likely they would be spared and thrown back."
