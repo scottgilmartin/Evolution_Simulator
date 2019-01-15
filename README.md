@@ -11,11 +11,16 @@ In this way we can progressively make the sprite look more like a face with each
 
 # Using the simulation
 
-The output of the code:
+Moustached man:
 
-<img src="https://github.com/scottgilmartin/Auto_Network/blob/master/images/1.png" alt="alt text" width="60%" height="50%">
+<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/Mario.png" alt="alt text" width="100%" height="100%">
 
-A closer look at the main community:
+A closer look:
 
-<img src="https://github.com/scottgilmartin/Auto_Network/blob/master/images/2.png" alt="alt text" width="60%" height="50%">
+<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/2.png" alt="alt text" width="60%" height="50%">
+
+
+Dog face:
+
+<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/Dog_evolve.png" alt="alt text" width="100%" height="100%">
 
