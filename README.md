@@ -11,6 +11,9 @@ In this way we can progressively make the sprite look more like a face with each
 
 # Using the simulation
 
+Run the code to generate a grid of sprites. User clicks preferred sprite (in this example we prefer sprites that look like human faces) and a new grid of sprites is generated based on the previous selection. Continue until either the number of simulation steps is reached or a key is pressed. The evolution is then displayed in reverse chronological order.
+Some examples are shown below.
+
 Moustached man:
 
 <img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/2.png" alt="alt text" width="60%" height="50%">
@@ -18,8 +21,7 @@ Moustached man:
 The entire evolution process:
 <img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/Mario.png" alt="alt text" width="100%" height="100%">
 
-
-Dog face:
+The simulator can be used in the same way to generate anything you can think of that is symmetrical. Here is an example of a dog face:
 
 <img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/Dog_evolve.png" alt="alt text" width="100%" height="100%">
 
