@@ -16,7 +16,6 @@ Moustached man:
 <img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/Mario.png" alt="alt text" width="100%" height="100%">
 
 A closer look:
-
 <img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/2.png" alt="alt text" width="60%" height="50%">
 
 
