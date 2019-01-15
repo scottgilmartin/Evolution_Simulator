@@ -15,8 +15,8 @@ Some examples are shown below.
 A face sprite and it's unique corresponding DNA matrix:
 
 <p align="center">
-<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/grump.png" alt="alt text" width="25%" height="25%" class=center>
-<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/grump_dna_single.png" alt="alt text" width="25%" height="25%" class=center></p>
+<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/grumpfig.png" alt="alt text" width="25%" height="25%" class=center>
+<img src="https://github.com/scottgilmartin/Evolution_Simulator/blob/master/images/grumpdnafig.png" alt="alt text" width="25%" height="25%" class=center></p>
 
 Moustached man:
 
