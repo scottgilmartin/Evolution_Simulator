@@ -35,12 +35,12 @@ class GridTests(unittest.TestCase):
                         
 
     def test_add_sprite(self):
-        ## Build a sprite and assert that its mutation method works as expected
+        #test that adding sprites works as expected
         self.assertLess(len(self.grid.img_grid), len(self.grid2.img_grid),'check adding sprite increases length of grid.img_grid')
         self.assertEqual(len(self.grid3.img_grid), self.grid_num**2,'check adding sprites gives correct length')
    
     def test_construct_grid(self):
-        ## Build a sprite and assert that its mutation method works as expected
+        #test that constructing the grid works as expected
         self.assertEqual(len(self.mutation_grid),2,'check mutation_grid contains both sub-grids')
         self.assertEqual(len(self.img_grid),self.grid_num*self.x,'check the grid is the correct size')
         self.assertGreater(sum(sum(self.img_grid)),0,'check the grid contains pixels')
