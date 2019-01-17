@@ -19,14 +19,14 @@ class SpriteTests(unittest.TestCase):
                         
 
     def test_mutation(self):
-        ## Build a sprite and assert that its mutation method works as expected
+        #build a sprite and assert that its mutation method works as expected
         self.assertEqual(len(self.sprite.mutation().dna), 48,'check mutation preserves matrix size')
         self.assertNotEqual(sum(sum(self.sprite.mutation().dna)), sum(sum(self.sprite.mutation().dna)),
         'check that two mutations of the same dna are different, and therefore also different to the original dna')
         #there is a small chance that the two mutations will actually be the same and throw this error. Run again.
  
     def test_draw(self):
-        ## Build a sprite and assert that its mutation method works as expected
+        #build a sprite and assert that its draw method works as expected
         self.assertEqual(len(self.sprite.draw()), 48,'check drawing sprite preserves matrix size')
         self.assertNotEqual(sum(sum(self.sprite.dna)), sum(sum(self.sprite.draw())),'check that drawing does something to dna')
  
