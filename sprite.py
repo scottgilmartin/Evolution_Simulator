@@ -3,6 +3,7 @@ import numpy
 import random
 from sim_config import SPRITE_HEIGHT, SPRITE_WIDTH, death_limit, birth_limit
 
+
 class Sprite:
     """
     A sprite is associated with a dna matrix which can be mutated and drawn into a corresponding avatar representation, 
@@ -11,7 +12,8 @@ class Sprite:
     In the evolution simulator, the dna of the selected avatar is mutated in (grid_size**2) different ways 
     and so (grid_size**2) similar avatars are produced in the next generation.
     """
-    STEPS_NUM = 5 #number of times we apply the game of life simulation, changing this affects how the avatar image is drawn from dna
+    STEPS_NUM = 5  # number of times we apply the game of life simulation,
+    #  changing this affects how the avatar image is drawn from dna
 
     def __init__(self, dna):
         """
@@ -47,7 +49,7 @@ class Sprite:
         """
         Randomly mutate the dna matrix by giving every pixel a 1% chance to change state.
         """
-        copy_mat = numpy.zeros((SPRITE_WIDTH, SPRITE_HEIGHT)) #copy the input matrix into copy_mat
+        copy_mat = numpy.zeros((SPRITE_WIDTH, SPRITE_HEIGHT))  # copy the input matrix into copy_mat
         for n in range(SPRITE_WIDTH):
             for m in range(SPRITE_HEIGHT):
                 copy_mat[n, m] += mat[n, m]
@@ -56,18 +58,12 @@ class Sprite:
             for m in range(SPRITE_HEIGHT):
                 
                 if (n - SPRITE_WIDTH / 2) ** 2 + (m - SPRITE_HEIGHT / 2) ** 2 < (SPRITE_WIDTH / 2.5) ** 2: 
-                    #only want to act on the pixels within the defined circle
+                    # only want to act on the pixels within the defined circle
                     
-                    if random.randint(0, 100) > 99:  #1% chance to change state
+                    if random.randint(0, 100) > 99:  # 1% chance to change state
                         
                         if copy_mat[n, m]:   
-                            copy_mat[n, m] = False   #True becomes False and vice versa
+                            copy_mat[n, m] = False   # True becomes False and vice versa
                         else:
                             copy_mat[n, m] = True
         return copy_mat
-    
-    
-    
-    
-    
-    
