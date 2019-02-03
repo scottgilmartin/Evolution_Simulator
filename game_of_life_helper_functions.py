@@ -1,7 +1,8 @@
 import numpy
 import random
 
-def determine_life(x,y,width,height): 
+
+def determine_life(x, y, width, height):
     """
     This function iterates through every point (x,y) in a matrix of size (width,height) and changes it's value from False to True
     with some probability. The probability is 0.55 inside the defined circle and 0.5 elsewhere.
@@ -9,13 +10,13 @@ def determine_life(x,y,width,height):
     alive=False
     num=random.randint(0, 100)
         
-    if (x-width/2)**2+(y-height/2)**2<(width/5)**2: #greater chance to generate living pixel in this circle
+    if (x-width/2)**2+(y-height/2)**2 < (width/5)**2:  # greater chance to generate living pixel in this circle
             
-        if num<55:      
-            alive=True
+        if num < 55:
+            alive = True
     else:
-        if num<50:
-            alive=True  
+        if num < 50:
+            alive = True
                 
     return alive
 
@@ -41,12 +42,12 @@ def game_of_life_simulation(mat, width, height, death_limit, birth_limit):
         for y in range(height):
             nbs = _count_alive_neighbours(mat, x, y, width, height)
             if mat[x, y]:
-                if nbs < death_limit:  #if a live pixel is surrounded by death_limit=4 pixels in the game of life, then it dies
+                if nbs < death_limit:  # if a live pixel is surrounded by death_limit=4 pixels then it dies
                     new_mat[x, y] = False
                 else:
                     new_mat[x, y] = True
             else:
-                if nbs > birth_limit: #if a dead pixel is surrounded by birth_limit=4 pixels in the game of life, then it comes to life
+                if nbs > birth_limit:  # if a dead pixel is surrounded by birth_limit=4 pixels then it comes to life
                     new_mat[x, y] = True
                 else:
                     new_mat[x, y] = False
