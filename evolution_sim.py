@@ -7,8 +7,9 @@ from game_of_life_helper_functions import determine_life
 from sim_config import SPRITE_WIDTH, SPRITE_HEIGHT
 
 CCMAP = mpl.colors.ListedColormap(['#4b0057', '#40418A', '#7551B4', '#604CDD', '#FF62F2', '#FF3B5A'])
-FIG,AX = plt.subplots()
-SELECTED_SPRITES=[]
+FIG, AX = plt.subplots()
+SELECTED_SPRITES = []
+
 
 class EvolutionSim:
     """
@@ -22,10 +23,11 @@ class EvolutionSim:
         """
         Initialize the first generation of sprites and grid to add them to.
         """
-        self.sprites = [Sprite(dna_mat) for i in range(grid_size ** 2)]
+        self.sprites = [Sprite(dna_mat) for _ in range(grid_size ** 2)]
         self.grid = Grid(grid_size)
         self._img_grid_mat = None 
-        self._dna_grid_mat = None #None until we draw the sprites as matrices and add these to the image/dna list in Grid
+        self._dna_grid_mat = None
+        # None until we draw the sprites as matrices and add these to the image/dna list in Grid
 
     @property
     def img_grid_mat(self): 
@@ -61,7 +63,8 @@ class EvolutionSim:
         """
         self._img_grid_mat, self._dna_grid_mat = self.grid.construct_grid()
 
-def onclick(event): #maybe work this into ES class
+
+def onclick(event):
     """
     Detects click coordinates on active figure, converts the coordinates into (row,col) of the grid matrix
     and stores them as globals to be read by the simulation.
@@ -71,6 +74,7 @@ def onclick(event): #maybe work this into ES class
     col = int(click_coord[0] / SPRITE_WIDTH)
     row = int(click_coord[1] / SPRITE_HEIGHT)
     plt.close(FIG)
+
 
 def gen_initial_dna():
     """
@@ -84,6 +88,7 @@ def gen_initial_dna():
                     init_dna_mat[n,m]=True
     return init_dna_mat
 
+
 def run_simulation(dna_mat, evolution_num, grid_size):
     """
     Run the evolution simulation for the specified number of steps. At each step user clicks an avatar, the dna associated
@@ -93,23 +98,28 @@ def run_simulation(dna_mat, evolution_num, grid_size):
 
     for _ in range(evolution_num):
         sim = EvolutionSim(dna_mat, evolution_num, grid_size)
-        sim.evolve_grid() #generate the mutations from the input dna_mat
-        img_grid_mat = sim.img_grid_mat #built with construct_grid() method, the grid of avatars that is displayed while sim runs
+        sim.evolve_grid()  # generate the mutations from the input dna_mat
+        img_grid_mat = sim.img_grid_mat  # built with construct_grid() method,
+        #  the grid of avatars that is displayed while sim runs
         
-        FIG,AX = plt.subplots() ## need to explain more what's going on after this point                                 
+        FIG, AX = plt.subplots()
         AX.matshow(img_grid_mat, cmap=CCMAP)
-        FIG.canvas.mpl_connect('button_press_event', onclick) #detect events on a figure, used to get user mouse click coords
+        FIG.canvas.mpl_connect('button_press_event', onclick)
+        # detect events on a figure, used to get user mouse click coords
         plt.show()
 
-        plt.pause(1) #allow the plot to show before waiting for click event
+        plt.pause(1)  # allow the plot to show before waiting for click event
 
         if plt.waitforbuttonpress():
-            break #exit simulation by pressing any key
+            break  # exit simulation by pressing any key
         else:
-            selected_sprite = sim.grid.img_grid[(grid_size * col) + row] #clicking an avatar feeds its position back to here using (row,col)
+            selected_sprite = sim.grid.img_grid[(grid_size * col) + row]
+            # clicking an avatar feeds its position back to here using (row,col)
             selected_dna = sim.grid.dna_grid[(grid_size * col) + row]
             SELECTED_SPRITES.append(selected_sprite)
-            dna_mat = selected_dna #set the dna_mat to the dna of the selected avatar, this feeds back into the loop allowing the next generation to be mutations of the selected avatar
+            dna_mat = selected_dna
+            # set the dna_mat to the dna of the selected avatar,
+            # this feeds back into the loop allowing the next generation to be mutations of the selected avatar
             plt.close()
             
     return SELECTED_SPRITES
@@ -128,13 +138,14 @@ def view_evolution(sprites):
 
     plt.matshow(evolution_result, cmap=CCMAP)
 
-#initialize and run the simulation, and view the result.
-                    
-dna_mat=gen_initial_dna() 
+# initialize and run the simulation, and view the result.
 
-grid_size=4 
+
+dna_mat = gen_initial_dna()
+
+grid_size = 4
   
-evolution_num=20 
+evolution_num = 20
 
 run_simulation(dna_mat, evolution_num, grid_size)
 
